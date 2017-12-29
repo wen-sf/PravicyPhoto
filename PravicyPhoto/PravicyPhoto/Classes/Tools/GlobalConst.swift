@@ -9,8 +9,17 @@
 import Foundation
 
 
+// MARK: - UserDefault
+
 /// 相册密码
 let kUserPhotoPasswordKey = "kUserPhotoPasswordKey"
 
+// MARK: - 提示文案
+
+/// 输入密码
+let kInputPasswordText = "请输入密码，按“=“确定"
+
+/// 重复密码
+let kRepeatPasswordText = "请再次输入密码"
 
 

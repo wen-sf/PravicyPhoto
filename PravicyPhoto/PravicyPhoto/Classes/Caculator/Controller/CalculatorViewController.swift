@@ -42,10 +42,10 @@ class CalculatorViewController: UIViewController {
                 displayLabel.text = "0"
             } else {
                 calculatorVM = PassBoardViewModel()
-                displayLabel.text = "请输入密码，按“=“确定"
+                displayLabel.text = kInputPasswordText
             }
         default:
-            displayLabel.text = "请输入密码，按“=“确定"
+            displayLabel.text = kInputPasswordText
             calculatorVM = PassBoardViewModel()
         }
         // 显示回调
