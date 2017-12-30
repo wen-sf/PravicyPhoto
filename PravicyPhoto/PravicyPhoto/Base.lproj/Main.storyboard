@@ -14,7 +14,7 @@
         <!--Calculator View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="PravicyPhoto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalculatorViewController" id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="PravicyPhoto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -293,10 +293,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Root View Controller-->
+        <!--相册-->
         <scene sceneID="I00-C1-EcE">
             <objects>
-                <tableViewController id="qqe-jW-M38" sceneMemberID="viewController">
+                <tableViewController id="qqe-jW-M38" customClass="AlbumTableViewController" customModule="PravicyPhoto" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yD0-Ip-d3a">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -316,7 +316,13 @@
                             <outlet property="delegate" destination="qqe-jW-M38" id="3ls-jS-fdk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="A7I-i9-q4f"/>
+                    <navigationItem key="navigationItem" title="相册" id="A7I-i9-q4f">
+                        <barButtonItem key="leftBarButtonItem" title="重置密码" id="ZrT-XU-YNi">
+                            <connections>
+                                <action selector="resetAction:" destination="qqe-jW-M38" id="1P9-aC-0Vh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LcF-ss-ena" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

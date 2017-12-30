@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA4B4C151FF7A30C00E1790E /* AlbumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4B4C141FF7A30C00E1790E /* AlbumTableViewController.swift */; };
 		AA8B8C071FF623DA00FE2038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B8C061FF623DA00FE2038 /* AppDelegate.swift */; };
 		AA8B8C0C1FF623DA00FE2038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA8B8C0A1FF623DA00FE2038 /* Main.storyboard */; };
 		AA8B8C0E1FF623DA00FE2038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA8B8C0D1FF623DA00FE2038 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA4B4C141FF7A30C00E1790E /* AlbumTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewController.swift; sourceTree = "<group>"; };
 		AA8B8C031FF623DA00FE2038 /* PravicyPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PravicyPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8B8C061FF623DA00FE2038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA8B8C0B1FF623DA00FE2038 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA4B4C131FF7A2E800E1790E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AA4B4C141FF7A30C00E1790E /* AlbumTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		AA8B8BFA1FF623DA00FE2038 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +109,7 @@
 		AA8B8C221FF62BB400FE2038 /* Photo */ = {
 			isa = PBXGroup;
 			children = (
+				AA4B4C131FF7A2E800E1790E /* Controller */,
 			);
 			path = Photo;
 			sourceTree = "<group>";
@@ -217,6 +228,7 @@
 				AA8B8C2F1FF6354E00FE2038 /* CalculatorViewModel.swift in Sources */,
 				AA8B8C381FF64A4500FE2038 /* CalaulatorProtocol.swift in Sources */,
 				AA8B8C341FF641AD00FE2038 /* GlobalConst.swift in Sources */,
+				AA4B4C151FF7A30C00E1790E /* AlbumTableViewController.swift in Sources */,
 				AA8B8C071FF623DA00FE2038 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

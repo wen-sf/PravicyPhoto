@@ -28,31 +28,56 @@ class CalculatorViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        /// 设置ViewModel
         setupViewModel()
     }
     
-    // MARK: - 私有方法
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // 隐藏导航条
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        calculatorVM.clear()
+    }
+    
+}
+
+// MARK: - 私有方法
+extension CalculatorViewController {
+
     private func setupViewModel() {
         // 确定使用哪个VM
         switch viewType {
         case .Normal:
             if UserDefaults.standard.string(forKey: kUserPhotoPasswordKey) != nil {
-                calculatorVM = CalculatorViewModel()
-                displayLabel.text = "0"
+                setupCalculatorViewModel()
             } else {
-                calculatorVM = PassBoardViewModel()
-                displayLabel.text = kInputPasswordText
+                setupPassBoardViewModel()
             }
         default:
-            displayLabel.text = kInputPasswordText
-            calculatorVM = PassBoardViewModel()
+            setupPassBoardViewModel()
         }
         // 显示回调
         calculatorVM.displayCallback = { text in
             self.displayLabel.text =  text
         }
     }
+    
+    private func setupCalculatorViewModel() {
+        displayLabel.text = "0"
+        calculatorVM = CalculatorViewModel()
+        calculatorVM.targetVC = self
+    }
+    
+    private func setupPassBoardViewModel() {
+        displayLabel.text = kInputPasswordText
+        calculatorVM = PassBoardViewModel()
+        calculatorVM.targetVC = self
+    }
+    
 }
 
 // MARK: - Actions

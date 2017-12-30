@@ -11,6 +11,7 @@ import UIKit
 class CalculatorViewModel: NSObject, CalaulatorProtocol {
     
     // MARK: - 公开属性
+    var targetVC: UIViewController?
     var displayCallback: DisplayResult?
     var displayText: String = "0" {
         didSet {
@@ -54,6 +55,11 @@ class CalculatorViewModel: NSObject, CalaulatorProtocol {
    
     /// 输入运算符
     func inputSymbol(_ symbol: String) {
+        if symbol == "=" && displayText == (UserDefaults.standard.string(forKey: kUserPhotoPasswordKey)) {
+            pushToRootVC()
+            return
+        }
+        
         if numIsInputing {
             calculatorServer.setInputOperand(displayValue)
             numIsInputing = false

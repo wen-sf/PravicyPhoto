@@ -22,4 +22,7 @@ let kInputPasswordText = "请输入密码，按“=“确定"
 /// 重复密码
 let kRepeatPasswordText = "请再次输入密码"
 
+/// 密码验证错误
+let kValidateErrorText = "两次密码不一样，请重输"
+
 
