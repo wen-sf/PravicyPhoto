@@ -34,5 +34,11 @@ class CommonTool {
         }
     }
     
+    /// 生成UUID
+    class func getUUIDString() -> String {
+        return UUID().uuidString.replacingOccurrences(of: "-", with: "").lowercased()
+    }
+
+    
 }
 

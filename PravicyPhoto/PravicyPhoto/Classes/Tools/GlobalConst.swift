@@ -7,12 +7,25 @@
 //
 
 import Foundation
+import UIKit
+
+// MARK: - APP
+
+/// appDelegate
+let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
+/// 屏幕宽
+let kScreenWidth = UIScreen.main.bounds.width
+
+/// 屏幕高
+let kScreenHeight = UIScreen.main.bounds.height
 
 
 // MARK: - UserDefault
 
 /// 相册密码
 let kUserPhotoPasswordKey = "kUserPhotoPasswordKey"
+
 
 // MARK: - 提示文案
 
